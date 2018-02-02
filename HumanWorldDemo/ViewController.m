@@ -17,6 +17,8 @@
 #else
 #define NSLog(format, ...)
 #endif
+//16位颜色
+#define UIColorFromRGB(rgbValue) [UIColor  colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0  green:((float)((rgbValue & 0xFF00) >> 8))/255.0  blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 
 @interface ViewController ()
@@ -36,6 +38,8 @@
     NSLog(@"%@", metamacro_concat(st, r));  // This is Ryan!
     NSLog(@"%s",haha(21 r fe 34));
     NSLog(@"11");
+    self.title=@"HumanWorld";
+    self.navigationController.navigationBar.barTintColor=UIColorFromRGB(0x87CEFA);
 }
 
 

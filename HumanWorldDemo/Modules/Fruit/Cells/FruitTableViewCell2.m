@@ -9,6 +9,9 @@
 #import "FruitTableViewCell2.h"
 #define kWidth  [[UIScreen mainScreen] bounds].size.width
 
+//16位颜色
+#define UIColorFromRGB(rgbValue) [UIColor  colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0  green:((float)((rgbValue & 0xFF00) >> 8))/255.0  blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 #define cellH 50
 @implementation FruitTableViewCell2
 
@@ -17,7 +20,7 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        self.backgroundColor = [UIColor grayColor];
+        self.backgroundColor = UIColorFromRGB(0x87CEEB);
         [self.contentView addSubview:self.posterView];
         [self.contentView addSubview:self.countLabel];
         [self.contentView addSubview:self.nameLabel];
