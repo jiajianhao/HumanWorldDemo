@@ -23,7 +23,19 @@
     }
     return self;
 }
+- (id)initWithCellIdentifier:(NSString *)cellID CellIdentifier1:(NSString *)cellID2 configureCellBlock:(CellConfigureBlock)block
+{
+    self = [super init];
+    if (self)
+    {
+        self.cellIdentifier = cellID;
+        self.cellIdentifier2 = cellID2;
 
+        self.block = [block copy];
+        self.items = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath
 {
     return self.items[(NSUInteger)indexPath.row];

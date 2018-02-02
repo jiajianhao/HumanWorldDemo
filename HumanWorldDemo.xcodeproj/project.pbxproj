@@ -18,6 +18,7 @@
 		12532F3D200F745F003FE675 /* FruitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 12532F3C200F745F003FE675 /* FruitVC.m */; };
 		12532F41200F76F0003FE675 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12532F3F200F76F0003FE675 /* BaseViewController.m */; };
 		12532F44200F7717003FE675 /* BaseDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 12532F43200F7717003FE675 /* BaseDataSource.m */; };
+		126510E7202434F800FF8797 /* FruitTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 126510E6202434F800FF8797 /* FruitTableViewCell2.m */; };
 		12BAD4F62010350700CF46A0 /* FruitDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BAD4F52010350700CF46A0 /* FruitDataSource.m */; };
 		12BAD4F9201035DF00CF46A0 /* FruitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BAD4F8201035DF00CF46A0 /* FruitModel.m */; };
 		12BAD4FC2010380C00CF46A0 /* FruitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BAD4FB2010380C00CF46A0 /* FruitTableViewCell.m */; };
@@ -68,6 +69,8 @@
 		12532F40200F76F0003FE675 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		12532F42200F7717003FE675 /* BaseDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDataSource.h; sourceTree = "<group>"; };
 		12532F43200F7717003FE675 /* BaseDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseDataSource.m; sourceTree = "<group>"; };
+		126510E5202434F800FF8797 /* FruitTableViewCell2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FruitTableViewCell2.h; sourceTree = "<group>"; };
+		126510E6202434F800FF8797 /* FruitTableViewCell2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FruitTableViewCell2.m; sourceTree = "<group>"; };
 		12BAD4F42010350700CF46A0 /* FruitDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FruitDataSource.h; sourceTree = "<group>"; };
 		12BAD4F52010350700CF46A0 /* FruitDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FruitDataSource.m; sourceTree = "<group>"; };
 		12BAD4F7201035DF00CF46A0 /* FruitModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FruitModel.h; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 			children = (
 				12BAD4FA2010380C00CF46A0 /* FruitTableViewCell.h */,
 				12BAD4FB2010380C00CF46A0 /* FruitTableViewCell.m */,
+				126510E5202434F800FF8797 /* FruitTableViewCell2.h */,
+				126510E6202434F800FF8797 /* FruitTableViewCell2.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 				12BAD4FC2010380C00CF46A0 /* FruitTableViewCell.m in Sources */,
 				12BAD51A20108F3E00CF46A0 /* NationModel.m in Sources */,
 				12BAD524201095D900CF46A0 /* NationCell.m in Sources */,
+				126510E7202434F800FF8797 /* FruitTableViewCell2.m in Sources */,
 				12BAD51420108E9C00CF46A0 /* NationVC.m in Sources */,
 				12532EEC200F6F92003FE675 /* AppDelegate.m in Sources */,
 			);

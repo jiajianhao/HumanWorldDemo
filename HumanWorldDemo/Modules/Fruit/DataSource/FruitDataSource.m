@@ -8,6 +8,8 @@
 
 #import "FruitDataSource.h"
 #import "FruitTableViewCell.h"
+#import "FruitTableViewCell2.h"
+
 @implementation FruitDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -16,14 +18,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    FruitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier
-                                                            forIndexPath:indexPath];
-    cell.tag = indexPath.section * 100 + indexPath.row;
-    
-    id item = [self itemAtIndexPath:indexPath];
-    
-    self.block(cell, item);
-    return cell;
+    if (indexPath.row%2==0) {
+        FruitTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier
+                                                                   forIndexPath:indexPath];
+        cell.tag = indexPath.section * 100 + indexPath.row;
+        
+        id item = [self itemAtIndexPath:indexPath];
+        
+        self.block(cell, item);
+        return cell;
+    }
+    else{
+        FruitTableViewCell2 *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier2
+                                                                   forIndexPath:indexPath];
+        cell.tag = indexPath.section * 100 + indexPath.row;
+        
+        id item = [self itemAtIndexPath:indexPath];
+        
+        self.block(cell, item);
+        return cell;
+    }
 }
 
 @end

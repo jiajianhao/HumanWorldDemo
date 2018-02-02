@@ -9,6 +9,7 @@
 #import "FruitVC.h"
 #import "FruitDataSource.h"
 #import "FruitTableViewCell.h"
+#import "FruitTableViewCell2.h"
 #import "FruitModel.h"
 @interface FruitVC ()<UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -26,15 +27,24 @@
     
 }
 -(void)configTable{
-    CellConfigureBlock configCell = ^(FruitTableViewCell *cell, FruitModel *fMdeol)
+    CellConfigureBlock configCell = ^(id cell, FruitModel *fMdeol)
     {
- 
-        [cell configureWithFruitObj:fMdeol];
-        [cell moreActionOnClick:^(Boolean show){
-            NSLog(@"1111");
-        }];
+        if ([[cell class] isEqual:[FruitTableViewCell class]]) {
+            [cell configureWithFruitObj:fMdeol];
+            [cell moreActionOnClick:^(Boolean show){
+                NSLog(@"1111");
+            }];
+        }
+        else if ([[cell class] isEqual:[FruitTableViewCell2 class]]) {
+                [cell configureWithFruitObj:fMdeol];
+                [cell moreActionOnClick:^(Boolean show){
+                    NSLog(@"2222");
+                }];
+         }
+       
     };
-    FruitDataSource *aDataSource = [[FruitDataSource alloc] initWithCellIdentifier:@"FruitCell" configureCellBlock:configCell];
+    FruitDataSource *aDataSource = [[FruitDataSource alloc] initWithCellIdentifier:@"FruitCell" CellIdentifier1:@"FruitCell2" configureCellBlock:configCell];
+
     self.tableView.dataSource = aDataSource;
     [self setDataSource:aDataSource];
     
@@ -85,6 +95,8 @@
         _tableView.delegate = self;
          [_tableView setBackgroundColor:[UIColor clearColor]];
         [_tableView registerClass:[FruitTableViewCell class] forCellReuseIdentifier:@"FruitCell"];
+        [_tableView registerClass:[FruitTableViewCell2 class] forCellReuseIdentifier:@"FruitCell2"];
+
         _tableView.scrollEnabled= YES;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.sectionHeaderHeight=0;

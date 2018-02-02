@@ -14,9 +14,14 @@ typedef void (^CellConfigureBlock)(id cell, id item);
 
 @property (nonatomic, strong) NSMutableArray *items;
 @property (nonatomic, copy)   NSString *cellIdentifier;
+@property (nonatomic, copy)   NSString *cellIdentifier2;
+
 @property (nonatomic, copy)   CellConfigureBlock block;
 
 - (id)initWithCellIdentifier:(NSString *)cellID
+          configureCellBlock:(CellConfigureBlock)block;
+- (id)initWithCellIdentifier:(NSString *)cellID
+             CellIdentifier1:(NSString *)cellID2
           configureCellBlock:(CellConfigureBlock)block;
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath;
